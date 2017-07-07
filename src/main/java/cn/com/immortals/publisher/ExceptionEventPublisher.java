@@ -17,7 +17,7 @@ public class ExceptionEventPublisher implements ApplicationEventPublisherAware {
         this.applicationEventPublisher = applicationEventPublisher;
     }
 
-    public void publisher() {
-        applicationEventPublisher.publishEvent(new ExceptionEvent(this, "A10000", "系统出现异常"));
+    public void publisher(Throwable throwable) {
+        applicationEventPublisher.publishEvent(new ExceptionEvent(this, "A10000", throwable.getMessage()));
     }
 }

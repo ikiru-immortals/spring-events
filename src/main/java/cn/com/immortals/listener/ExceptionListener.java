@@ -11,6 +11,6 @@ import org.springframework.stereotype.Service;
 public class ExceptionListener implements ApplicationListener<ExceptionEvent> {
 
     public void onApplicationEvent(ExceptionEvent exceptionEvent) {
-
+        System.out.println(exceptionEvent.getErrorCode() + "===>" + exceptionEvent.getErrorMsg());
     }
 }

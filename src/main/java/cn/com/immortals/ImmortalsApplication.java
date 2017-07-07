@@ -11,6 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan("cn.com.immortals")
 public class ImmortalsApplication {
 
+
     public static void main(String[] args) {
         try {
             SpringApplication application = new SpringApplication(ImmortalsApplication.class);
